@@ -1,9 +1,9 @@
 @regression
-Feature: Access control user management
-    #    Use cases for app access control
+Feature: Create Login Feature
+    
 
   @valid_login @smoke_test
-  Scenario: As a user, I should be able to login
+  Scenario: Verify Login as a user with valid credentials
     Given I am on the login page
     And login page components exist
     When I enter valid username and valid password
@@ -28,7 +28,7 @@ Feature: Access control user management
    
    
    @invalid_login_outline
-   Scenario Outline: As a user i should not be able to login with invalid credentials
+   Scenario Outline: Login as a user with invalid credentials
    Given I am on the login page
    When i enter invalid username "<username>" and password "<password>"
    And I click login button 
