@@ -36,6 +36,15 @@ public class Access_control_page {
 	public WebElement login_successful_message;
 	
 	
+	@FindBy (xpath ="//p[text()='These credentials do not match our records.']")
+	public WebElement login_credentials_not_match_message;
+	
+	
+	@FindBy (xpath= "//span[text()='Field is required']")
+	public WebElement login_field_is_required;
+	
+	
+	
 	public void login(String user_type) {
 		Driver.getDriver().get(DataReader.getProperty("app_url"));
 		

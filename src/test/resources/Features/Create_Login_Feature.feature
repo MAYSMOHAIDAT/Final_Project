@@ -1,18 +1,8 @@
-@regression
+
+
 Feature: Create Login Feature
-    
 
-  @valid_login @smoke_test
-  Scenario: Verify Login as a user with valid credentials
-    Given I am on the login page
-    And login page components exist
-    When I enter valid username and valid password
-    And I click login button
-    Then I should be on the Dashboard page
-    And the success message displays
-
-
-  @valid_login_variable @smoke_test
+   @valid_login_variable
    Scenario: As a user, I should be able to login
    Given I am on the login page
    And login page components exist
@@ -24,11 +14,9 @@ Feature: Create Login Feature
    
    
    
-  
    
-   
-   @invalid_login_outline
-   Scenario Outline: Login as a user with invalid credentials
+    @invalid_login_outline
+   Scenario Outline: As a user i should not be able to login with invalid credentials
    Given I am on the login page
    When i enter invalid username "<username>" and password "<password>"
    And I click login button 
@@ -44,3 +32,11 @@ Feature: Create Login Feature
    |                             |notrael         |
    |notrael@prim.com             |primetech@school|
    |dummy@primetechschool.com    |                |
+   
+   
+   
+  
+
+
+
+

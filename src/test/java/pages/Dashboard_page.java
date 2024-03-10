@@ -17,6 +17,9 @@ public class Dashboard_page {
 	public WebElement dashboard_amountDueText;
 
 	
+
+	@FindBy (xpath = "//a[text()=' Customers']")
+	public WebElement Customer_tab;
 	
 	
 	@FindBy (xpath = "//a[text()=' Items']")
