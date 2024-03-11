@@ -17,6 +17,16 @@ public class Access_control_page {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
+	
+	
+	@FindBy (xpath="//h1[text()='Simple Invoicing for Individuals Small Businesses']")
+	public WebElement heading1;
+	
+	
+	@FindBy (xpath="//p[text()='Crater helps you track expenses, record payments & generate beautiful invoices & estimates.']")
+	public WebElement heading2;
+	
+	
 	@FindBy (name="email")
 	public WebElement login_username;
 	

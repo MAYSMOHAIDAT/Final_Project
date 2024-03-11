@@ -18,13 +18,17 @@ public class customer_page {
 	@FindBy (xpath = "//button[text()=' New Customer']")
 	public WebElement customers_new_customer_button;
 	
+	@FindBy (xpath = "//th[text()='Added On ']")
+	public WebElement customers_name_table_added_on;
+	
+	
 	
 	@FindBy (xpath = "//button[text()='Filter ']")
 	public WebElement customers_filter_button;
 	
 	
-	@FindBy (xpath = "//a[text()='Home']")
-	public WebElement customers_home_text;
+	@FindBy (xpath = "//ol[@class='flex flex-wrap py-4 text-gray-900 rounded list-reset']")
+	public WebElement customers_home_text_path;
 	
 	
 	@FindBy (xpath = "//th[text()='Name ']")
@@ -37,6 +41,10 @@ public class customer_page {
 	public WebElement customers_name_table_Amount_Due;
 	
 	
+	@FindBy (id="headlessui-menu-button-5")
+	public WebElement ThreeDotButton;
+	
+	
 	 @FindBy (xpath = "(//button[contains(@id, 'headlessui-menu-button')])[3]")
 	 public WebElement customers_page_3dot_menu;
 	 
@@ -44,13 +52,24 @@ public class customer_page {
 	 @FindBy (xpath = "//h3[text()='New Customer']")
 	 public WebElement customers_new_customers_text;
 	 
-	 
-	 
-	 
-	 
-	 
 	 @FindBy (xpath = "//button[text()=' Save Customer']")
 	 public WebElement customers_save_customer_button;
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
 	 
 
 	 @FindBy (xpath = "//h6[text()='Basic Info']")
