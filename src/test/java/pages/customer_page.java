@@ -55,6 +55,13 @@ public class customer_page {
 	 @FindBy (xpath = "//button[text()=' Save Customer']")
 	 public WebElement customers_save_customer_button;
 	 
+	 @FindBy (xpath="//span[text()='Field is required']")
+	   public WebElement fieldisRequiredErrorMessage;
+	 
+	 
+	 @FindBy (xpath="//span[text()='Incorrect Email.']")
+	 public WebElement incorrectEmailMessage;
+	 
 	 
 	 
 	 
@@ -80,8 +87,12 @@ public class customer_page {
 	 public WebElement customers_display_name_textbox;
 	 
 	 
-	 @FindBy (xpath = "/html/body/div/main/div/div/form/div[2]/div/div[1]/div/div[3]/div/div/input")
+	 @FindBy (xpath = "//input[@name='email']")
 	 public WebElement customers_email_textbox;
+	 
+	 
+	 @FindBy (xpath="//span[text()='Invalid url (ex: http://www.craterapp.com)']")
+	 public WebElement websiteErrormessage;
 	 
 	 @FindBy (xpath="//div[text()='USD - US Dollar']/following::span[1]")
 	public WebElement currencyDropDownButton;
@@ -106,6 +117,15 @@ public class customer_page {
 	 @FindBy (xpath="//h6[text()=' Sales & Expenses']")
 	 public WebElement customer_customer_view_sales_and_expenses;
 	 
+	 @FindBy (xpath="//input[@name='password']")
+	 public WebElement customer_password_fileld;
+	 
+	 @FindBy (xpath="//input[@name='confirm_password']")
+	 public WebElement customer_Confirm_Password_fileld;
+	 
+	 @FindBy (xpath="//div[text()='Customer Portal Login URL ']")
+	 public WebElement customer_customerPortalUrlHeader;
+	
 	 
 	  @FindBy (xpath = "//button[text()='Filter ']")
 	   public WebElement customers_Filter_btn;
@@ -114,7 +134,10 @@ public class customer_page {
 	   public WebElement customers_Filter_display_name;
 	  
 	 
-	 
+	  @FindBy (xpath = "//button[@modelvalue='false']")
+	   public WebElement Customer_Toggle;
+	  
+	
 	 
 	  @FindBy (xpath = "//a[text()=' Edit']")
 	    public WebElement customers_page_3dot_edit_option;
@@ -130,10 +153,49 @@ public class customer_page {
 	 
 	 
 	  @FindBy (xpath = "//button[text()='Ok']")
-	    public WebElement customer_page_delete_ok_btn;
+	   public WebElement customer_page_delete_ok_btn;
 	 
 	 
+	  
+	  
+	  @FindBy (xpath = "//h6[text()='Billing Address'] ")
+	   public WebElement customer_Billing_address_text;
+	  
+	  @FindBy (xpath = " (//input[@name='address_name'])[1]")
+	   public WebElement customer_Billing_address_name_text;
+	
+	  @FindBy (xpath = "(//input[@name='billing.state'])")
+	   public WebElement customer_Billing_address_stata_text;
+	  
+	  
+	  @FindBy (xpath = "//textarea[@name='billing_street1']")
+	   public WebElement customer_Billing_address_Address1_text;
+	  
+	  
+	  
+	  @FindBy (xpath = "//textarea[@name='billing_street2']")
+	  public WebElement customer_Billing_address_Address2_text;
+	  
 	 
-	 
-	 
+	  @FindBy (xpath = "//input[@name='billing.city']")
+	  public WebElement customer_Billing_address_City_text;
+	  
+	  @FindBy (xpath = "(//input[@name='phone'])[2]")
+	  public WebElement customer_Billing_address_phone_text;
+	
+	  
+	  @FindBy (xpath = "(//input[@name='zip'])[1]")
+	  public WebElement customer_Billing_address_zip_text;
+	  
+	  
+	  
+	  @FindBy (xpath = "(//button[text()=' Copy from Billing'])")
+	  public WebElement customer_copy_from_billing_button;
+	  
+	  @FindBy (xpath = " //button[text()=' Update Customer']")
+	  public WebElement customer_customer_update_customer_button;
+	  
+	  
+	  
+	  
 }
