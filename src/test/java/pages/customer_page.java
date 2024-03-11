@@ -142,6 +142,10 @@ public class customer_page {
 	  @FindBy (xpath = "//a[text()=' Edit']")
 	    public WebElement customers_page_3dot_edit_option;
 	 
+	  
+	  @FindBy (xpath = "//a[text()=' View']")
+	   public WebElement customers_page_3dot_view_option;
+	 
 	 
 	  @FindBy (xpath = "//a[text()=' Delete']")
 	    public WebElement customer_page_3dot_delete_option;

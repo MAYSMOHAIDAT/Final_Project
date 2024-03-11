@@ -227,8 +227,8 @@ public class Create_add_customer_steps {
 		dash_page.Customer_tab.click();
 		utils.waitUntilUrlContains("customers");
 		Thread.sleep(500);
-		custom_p.customers_page_3dot_menu.click();
-		custom_p.customers_page_3dot_edit_option.click();
+		
+		
 		
 		
 		 
@@ -238,6 +238,7 @@ public class Create_add_customer_steps {
 	
 	@Then("I should be able to select givin customer")
 	public void i_should_be_able_to_select_givin_customer() throws InterruptedException {
+		custom_p.customers_page_3dot_menu.click();
 		
 		
 	  
@@ -247,12 +248,44 @@ public class Create_add_customer_steps {
 
 	@Then("I can be able to update customer info, and save it")
 	public void i_can_be_able_to_update_customer_info_and_save_it() throws InterruptedException {
+		custom_p.customers_page_3dot_edit_option.click();
 		utils.waitUntilUrlContains("/edit");
 		Thread.sleep(1000);
 		utils.waitForElementToBeVisible(custom_p.customers_display_name_textbox);
 		custom_p.customers_display_name_textbox.clear();
 		custom_p.customers_display_name_textbox.sendKeys("New Zerix");
 		custom_p.customer_customer_update_customer_button.click();
+	}
+	
+	
+	//Validate_View_Customers
+	
+	@Then("I can able to View given Customer")
+	public void i_can_able_to_view_given_customer() {
+		custom_p.customers_page_3dot_view_option.click();
+	}
+	
+	
+	//Validate_Delelte_Customers
+	
+	@Then("I can able to delete given Customer")
+	public void i_can_able_to_delete_given_customer() {
+
+
+//	    utils.waitForElementToBeVisible(items_page.items_page_3dot_delete_option);
+//	    Assert.assertTrue(items_page.items_page_3dot_delete_option.isDisplayed());
+//	    items_page.items_page_3dot_delete_option.click();
+//	    utils.waitForElementToBeVisible(items_page.items_page_delete_ok_btn);
+//	    items_page.items_page_delete_ok_btn.click();
+//	    utils.waitForElementToBeVisible(items_page.items_Input_noResultFound_text);
+//	    Assert.assertTrue(items_page.items_Input_noResultFound_text.isDisplayed());
+		
+		
+		custom_p.customer_page_3dot_delete_option.click();
+		utils.waitForElementToBeVisible(custom_p.customer_Input_delete_youSure_text);
+		custom_p.customer_page_delete_ok_btn.click();
+		
+		
 	}
 	
 	

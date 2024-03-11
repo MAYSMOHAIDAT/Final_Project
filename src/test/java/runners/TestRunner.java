@@ -13,7 +13,7 @@ import io.cucumber.junit.Cucumber;
 				},
 		features="./src/test/resources/Features",
 		glue="steps_definitions",
-		tags="@Validate_Edit_Customers"
+		tags="@Validate_Delelte_Customers"
 		)
 
 
