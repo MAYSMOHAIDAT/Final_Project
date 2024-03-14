@@ -7,8 +7,8 @@
         <methods>
           <include name="update_item"/>
           <include name="get_item"/>
-          <include name="login_test"/>
           <include name="create_item"/>
+          <include name="login_test"/>
         </methods>
       </class> <!-- api_test.Items_management_api -->
     </classes>

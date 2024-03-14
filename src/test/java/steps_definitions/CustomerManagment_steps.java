@@ -12,7 +12,7 @@ import pages.customer_page;
 import utils.BrowserUtils;
 import utils.Driver;
 
-public class Create_add_customer_steps {
+public class CustomerManagment_steps {
 
 	Access_control_page acp = new Access_control_page();
 	Dashboard_page dash_page = new Dashboard_page();
@@ -272,18 +272,16 @@ public class Create_add_customer_steps {
 	public void i_can_able_to_delete_given_customer() {
 
 
-//	    utils.waitForElementToBeVisible(items_page.items_page_3dot_delete_option);
-//	    Assert.assertTrue(items_page.items_page_3dot_delete_option.isDisplayed());
-//	    items_page.items_page_3dot_delete_option.click();
-//	    utils.waitForElementToBeVisible(items_page.items_page_delete_ok_btn);
-//	    items_page.items_page_delete_ok_btn.click();
-//	    utils.waitForElementToBeVisible(items_page.items_Input_noResultFound_text);
-//	    Assert.assertTrue(items_page.items_Input_noResultFound_text.isDisplayed());
+
 		
 		
 		custom_p.customer_page_3dot_delete_option.click();
 		utils.waitForElementToBeVisible(custom_p.customer_Input_delete_youSure_text);
 		custom_p.customer_page_delete_ok_btn.click();
+		//if we need to do multiple delete action
+		custom_p.Customer_select_AllCheckBox.click();
+		custom_p.Customer_delete_action.click();
+		custom_p.customer_delete_actin_btn.click();
 		
 		
 	}

@@ -158,7 +158,17 @@ public class customer_page {
 	 
 	  @FindBy (xpath = "//button[text()='Ok']")
 	   public WebElement customer_page_delete_ok_btn;
+	  
+	  @FindBy (xpath="//input[contains(@id,'check')]")
+	  public WebElement Customer_select_AllCheckBox;
 	 
+	  @FindBy (xpath="//*[@id=headlessui-menu-button-360]/span/svg/path)")
+	  public WebElement Customer_delete_action;
+	 
+
+	  @FindBy (xpath="//a[text()=' Delete']")
+	  public WebElement customer_delete_actin_btn;
+	  
 	 
 	  
 	  
