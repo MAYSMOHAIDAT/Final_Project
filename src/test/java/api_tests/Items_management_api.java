@@ -125,7 +125,7 @@ public void login_test() {
 			
 			response.prettyPrint();
 			
-//			response.then().statusCode(200).contentType("application/json");
+
 			
 		
 			
@@ -174,17 +174,6 @@ public void login_test() {
 
 
 
-//	
-//	@Test (dependsOnMethods= {"login_test()"})
-//	public void list_all_items() {
-//		Response response = RestAssured
-//		.given().accept("application/json").auth().oauth2("Bearer " + token)
-//		.when().get(baseurl+"/api/v1/items");
-//		
-//		//response.prettyPrint();
-//		
-//		response.then().statusCode(200).contentType("application/json");
-//	}
 	
 
 

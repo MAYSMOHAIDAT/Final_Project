@@ -269,7 +269,7 @@ public class CustomerManagment_steps {
 	//Validate_Delelte_Customers
 	
 	@Then("I can able to delete given Customer")
-	public void i_can_able_to_delete_given_customer() {
+	public void i_can_able_to_delete_given_customer() throws InterruptedException {
 
 
 
@@ -278,6 +278,9 @@ public class CustomerManagment_steps {
 		custom_p.customer_page_3dot_delete_option.click();
 		utils.waitForElementToBeVisible(custom_p.customer_Input_delete_youSure_text);
 		custom_p.customer_page_delete_ok_btn.click();
+		
+		
+		Thread.sleep(500);
 		//if we need to do multiple delete action
 		custom_p.Customer_select_AllCheckBox.click();
 		custom_p.Customer_delete_action.click();
@@ -286,8 +289,42 @@ public class CustomerManagment_steps {
 		
 	}
 	
+	//Validate_filter_Customers
+	
+	@When("I click on Filter icon , I see Display name ,Content name , Phone textbox")
+	public void i_click_on_filter_icon_i_see_display_name_content_name_phone_textbox() {
+	    custom_p.customers_filter_button.click();
+	    custom_p.customers_Filter_display_name.isDisplayed();
+	    custom_p.customers_Filter_contact_name.isDisplayed();
+	    custom_p.customers_Filter_phone_textbx.isDisplayed();
+
+	}
+
+	@When("I insert value in Display name textbox, mathcing result is return")
+	public void i_insert_value_in_display_name_textbox_mathcing_result_is_return() {
+	 utils.actionsSendKeys(custom_p.customers_Filter_display_name, "New Zerix");
+	 utils.waitForElementToBeVisible(custom_p.Customer_filer_result_by_insert_name);
+	 Assert.assertTrue(custom_p.Customer_filer_result_by_insert_name.isDisplayed());
+	}
 	
 	
+	
+	
+	@When("I insert invalid value i see empty with message No Results Found")
+	public void i_insert_invalid_value_i_see_empty_with_message_no_results_found() {
+		custom_p.customers_Filter_display_name.clear();
+		utils.actionsSendKeys(custom_p.customers_Filter_display_name, "xyz");
+		utils.waitForElementToBeVisible(custom_p.Customer_filer_No_Results_Found);
+		Assert.assertTrue(custom_p.Customer_filer_No_Results_Found.isDisplayed());
+		
+	}
+
+	@When("I click clear all , I see current customers")
+	public void i_click_clear_all_i_see_current_customers() {
+	custom_p.Customer_filer_Clear_All.click();
+	
+	}
+
 	
 }
 	

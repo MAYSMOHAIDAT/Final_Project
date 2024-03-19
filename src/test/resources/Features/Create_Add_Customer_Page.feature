@@ -21,9 +21,9 @@
    
    @Validat_Basic_Info
    Scenario: As a user I can create Customer and Manage customer
-   And I click  +New Customer button
-   Then I should be on the  New Customer page
-   And i should see basic info field
+            And I click  +New Customer button
+            Then I should be on the  New Customer page
+            And i should see basic info field
    When i leave Diplay name empty ,i see field is required message
    When i insert incorrect email format i see incorrect email message
    When i add incorrect website format i see invalid url error message
@@ -102,4 +102,15 @@
     Then I should be able to select givin customer
     And I can able to delete given Customer
     Then I should be on the " Customers" page
+    
+   
+    
+    
+    @Validate_filter_Customers
+    Scenario: As a user I can create Customer and Manage customer
+    When I click on Filter icon , I see Display name ,Content name , Phone textbox
+    When I insert value in Display name textbox, mathcing result is return 
+    When I insert invalid value i see empty with message No Results Found
+    When I click clear all , I see current customers
+    When I click on Filter icon , I see Display name ,Content name , Phone textbox
   

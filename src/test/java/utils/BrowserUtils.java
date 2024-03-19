@@ -129,7 +129,16 @@ public class BrowserUtils {
 		alert = driver.switchTo().alert();
 		return alert.getText();
 	}
+	
+	
+	
+	
+	
+	// sendkeys via actions class to the field that is not enteractable
+		public void actionsSendKeys(WebElement element, String text) {
+			act = new Actions(Driver.getDriver());
+			act.sendKeys(element, text).build().perform();
 
-}
+}}
 
 

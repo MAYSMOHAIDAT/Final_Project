@@ -130,14 +130,44 @@ public class customer_page {
 	  @FindBy (xpath = "//button[text()='Filter ']")
 	   public WebElement customers_Filter_btn;
 	  
-	  @FindBy (xpath = "/html/body/div/main/div/div/div[2]/div/div[1]/div/div/input")
+	  @FindBy (xpath = "//input[@name='name']")
 	   public WebElement customers_Filter_display_name;
+	  
+	  
+	  @FindBy (xpath = "//input[@name='address_name']")
+	   public WebElement customers_Filter_contact_name;
+	  
+	  @FindBy (xpath = "//input[@name='phone']")
+	   public WebElement customers_Filter_phone_textbx;
 	  
 	 
 	  @FindBy (xpath = "//button[@modelvalue='false']")
 	   public WebElement Customer_Toggle;
 	  
 	
+	  
+	  
+	  @FindBy (xpath = "//span[text()='New Zerix']")
+	   public WebElement Customer_filer_result_by_insert_name;
+	  
+	  
+
+	  @FindBy (xpath = "//span[text()='No Results Found']")
+	   public WebElement Customer_filer_No_Results_Found;
+	  
+	  @FindBy (xpath = "//label[text()='Clear All']")
+	   public WebElement Customer_filer_Clear_All;
+	
+	  
+	  
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	 
 	  @FindBy (xpath = "//a[text()=' Edit']")
 	    public WebElement customers_page_3dot_edit_option;
@@ -162,7 +192,7 @@ public class customer_page {
 	  @FindBy (xpath="//input[contains(@id,'check')]")
 	  public WebElement Customer_select_AllCheckBox;
 	 
-	  @FindBy (xpath="//*[@id=headlessui-menu-button-360]/span/svg/path)")
+	  @FindBy (xpath="//span[text()='Actions ']")
 	  public WebElement Customer_delete_action;
 	 
 
