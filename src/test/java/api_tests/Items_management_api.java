@@ -17,19 +17,10 @@ public class Items_management_api {
 BrowserUtils utils = new BrowserUtils();
 	
 	
-	// normally in Java, you would just create a method to do certain things
-	// and use the main method to call those methods to execute. 
-	
-	// in TestNG, you just create a method to do certain things, and you don't need main method to execute.
-
-	
 	String token;
 	String baseurl = "http://crater.primetech-apps.com";
 	Response response;
 	int item_id;
-	// in RestAssured, we attach the body of the request in the given section.
-	
-	// injecting a string into a string:  "+variable+"
 	
 @Test
 public void login_test() {
